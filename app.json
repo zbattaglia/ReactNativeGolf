@@ -1,0 +1,12 @@
+{
+  "name": "router_practice",
+  "displayName": "router_practice",
+  "expo": {
+    "name": "router_practice",
+    "slug": "router_practice",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
