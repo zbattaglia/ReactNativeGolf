@@ -1,21 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+// import { StyleSheet, View, Text } from 'react-native';
+import { ImageBackground, StyleSheet } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import HomePage from './Components/HomePage';
 
 const styles = StyleSheet.create({
-  container: {
+  image: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    resizeMode: 'cover',
+    justifyContent: 'center'
   },
-});
+})
+
+const image = { url: 'https://blog.ihg.com/wp-content/uploads/2014/06/golf-green.jpg'}
+
+class MyApp extends Component {
+  render() {
+    return(
+      <ImageBackground style={styles.image} source={image}>
+        <HomePage />
+      </ImageBackground>
+    )
+  }
+}
+
+export default MyApp;
